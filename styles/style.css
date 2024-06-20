@@ -100,8 +100,12 @@ label:has(input:focus-visible) {
 
 }
 
+
 .search-form__label-text {
   padding: 0 15px 0 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;  /*????????*/
 }
 
 .search-form__label-text:hover {
@@ -122,6 +126,7 @@ label:has(input:focus-visible) {
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
+  gap: 15px;
 }
 
 .button {
