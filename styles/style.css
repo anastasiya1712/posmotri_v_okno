@@ -27,9 +27,8 @@ html {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  width: 1140px;
   gap: 30px;
-  /* height: 534px; */
+  width: 1140px;
 }
 
 .result {
@@ -46,10 +45,10 @@ html {
 }
 
 .result__video {
-  object-fit: cover;
-  object-position: center;
   width: 100%;
   height: 386px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -57,11 +56,10 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  /* width: 711px; */
-  /* height: 54px; */
 }
 
 .search-form__fieldset {
+  width: 100%;
   border: none;
 }
 
@@ -72,11 +70,16 @@ html {
   font-size: 18px;
 }
 
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
 .search-form__label {
   cursor: pointer;
 
-  @media(hover:hover) {
-    &:hover{
+  @media (hover: hover) {
+    &:hover {
       .search-form__label-text {
         text-decoration: underline;
         text-underline-offset: 4px;
@@ -90,6 +93,38 @@ html {
   }
 }
 
+.search-form__label-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: center;
+  user-select: none;
+}
+
+.visually-hidden {
+  border: none; /*?*/
+}
+
+.search-form__textfield {
+  border: none;
+  padding: 2.5px 14px 2.5px 0;
+  outline: none;
+  color: #fff 0.7;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .search-form__pseudo-checkbox {
   display: inline-flex;
   justify-content: center;
@@ -99,73 +134,30 @@ html {
   border: 1px solid #fff;
 }
 
-input:focus {
-  outline: none;
-}
-
-label:has(input:focus-visible) {
+/*label:has(input:focus-visible) {
   border: 1px solid #fff;
-}
-
-.search-form__textfield {
-  margin-right: 40px;
-  border: none;
-  outline: none;
-  padding: 2.5px 14px 2.5px 0; 
-  color: #fff 0.7;
-  font-family: inherit;
-  font-size: inherit;
-  background-color: transparent;
-
-}
+} */
 
 .search-form__label:has(input:checked) .search-form__pseudo-checkbox::before {
-  content: '';
+  content: "";
   width: calc(100% - 2px);
   height: calc(100% - 2px);
   background-color: #fff;
 }
 
-
-.search-form__label-text {
-  user-select: none;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21.6px;
-  text-align: center;
-
- /* &:hover {
-    text-decoration: underline;
-    text-decoration-color: #fff;
-  }
-
-  &:active {
-    width: 15px;
-    height: 15px;
-    color: #fff;
-  }
-  
-  &:focus {
-    border: solid 1px #fff;
-  }
-  */
-}
-
-.search-form__checkbox-list {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
+/*input:focus {
+  outline: none;
+}*/
 
 .button {
+  width: 194px;
+  height: 34px;
   border: solid 1px #fff;
   padding: 6px 73.5px;
   color: #fff;
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
-  width: 194px;
-  height: 34px;
 
   &:hover {
     text-decoration: underline;
@@ -179,17 +171,7 @@ label:has(input:focus-visible) {
   &:focus {
     outline: 1px solid #fff;
     outline-offset: 2px;
-}
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  inline-size: 1px;
-  block-size: 1px;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  }
 }
 
 .content__details {
@@ -215,29 +197,34 @@ label:has(input:focus-visible) {
   width: 399px;
   height: 298px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .content__list-item {
-  margin-bottom: 30px; /*?*/
-}
-
-.li:first-child {
-  margin-top: 0;
-}
-
-.li:last-child {
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /*?*/
 }
 
 .content__video-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
 
-.content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+
+  &:active {
+    background-color: #545050;
+  }
+
+  &:focus {
+    outline: 1px solid #fff;
+  }
 }
 
 .content__video-card-description-container {
@@ -256,6 +243,11 @@ label:has(input:focus-visible) {
 .content__video-card-description {
   font-weight: 400;
   font-size: 18px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
 }
 
 .more-button {
