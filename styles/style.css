@@ -101,10 +101,6 @@ html {
   user-select: none;
 }
 
-.visually-hidden {
-  border: none; /*?*/
-}
-
 .search-form__textfield {
   border: none;
   padding: 2.5px 14px 2.5px 0;
@@ -123,6 +119,12 @@ html {
   block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
+  border: none; /*?*/
+}
+
+.search-form__textfield {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .search-form__pseudo-checkbox {
@@ -165,6 +167,7 @@ html {
   }
 
   &:active {
+    text-decoration-line: none;
     background-color: #545050;
   }
 
@@ -216,9 +219,11 @@ html {
   &:hover {
     text-decoration: underline;
     text-decoration-color: #fff;
+    text-decoration-skip-ink: none;
   }
 
   &:active {
+    text-decoration-line: none;
     background-color: #545050;
   }
 
