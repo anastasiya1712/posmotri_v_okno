@@ -16,7 +16,7 @@ html {
   margin: auto;
   padding: 133px 30px;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
@@ -105,7 +105,7 @@ html {
 }
 
 .search-form__textfield {
-  min-width: 225px; /*если больше, всё ок*/
+  min-width: 225px; 
   border: none;
   border: 1px solid #fff;
   border-width: 1px 0;
@@ -115,6 +115,10 @@ html {
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
+  appearance: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .visually-hidden {
@@ -126,12 +130,6 @@ html {
   block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-.search-form__textfield {
-  color: #fff;
-  font-weight: 400;
-  font-size: 18px;
 }
 
 .search-form__pseudo-checkbox {
@@ -159,6 +157,8 @@ html {
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
@@ -183,8 +183,8 @@ html {
 }
 
 .title {
-  width: 260px;
-  height: 210px;
+  max-width: 260px;
+  /*height: 210px;*/
   margin: 0 139px 26px 0;
   font-family: Oswald;
   font-weight: 700;
@@ -255,8 +255,10 @@ html {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
+  object-fit: ; /*?*/
+  min-width: 194px;
   height: 103px;
+
 }
 
 .more-button {
